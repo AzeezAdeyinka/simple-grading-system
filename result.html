@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <marquee style="font-size: 30px; font-family:monospace; margin-top:5%; color:#6600cc;" behavior="" direction="">
+        Every successful students is a reader
+    </marquee>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    
+    <div class="container">
+        <input type="text" placeholder="Enter your score" id="Score">
+        <button id="btn" onclick="checkResult()">check</button>
+        <p id="result"></p>
+    </div>
+  <script>
+    function checkResult(){
+        var myScore = Score.value
+    if(myScore>=70 && myScore<101){
+    
+        result.innerText ="A (First Class Honours)"
+    }
+    else if(myScore >=60 && myScore<70)
+
+        result.innerText ="B (Second Class Honours, upper)"
+    else if(myScore >=50 && myScore<60){
+        result.innerText ="C (Second Class Honours, lower)"
+    }
+    else if(myScore >=45 && myScore<50){
+        result.innerText ="D (Third Class) put more effort!!!"
+    }
+    else if(myScore >=40 && myScore<45){
+        result.innerText ="E (Pass) You need to work hard!!!"
+    }
+    else if(myScore >=0 && myScore<40 ){
+        result.innerText ="F (Fail) Very Bad!!!"
+    }
+    else if(myScore <0 ){
+        result.innerText ="INVALID!!!"
+    }
+    else if(myScore>100 ){
+        result.innerText ="INVALID!!!"
+    }
+    }
+</script>
+</body>
+</html>
